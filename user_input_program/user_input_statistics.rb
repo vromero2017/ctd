@@ -1,12 +1,17 @@
-def main
-  # we need an array to store our data
-  # how do we assign an array to a variable?
-  loop do
-    # continue to ask for a number
-    # challenge: how do I check that may input is an integer and not a string?
-    break if value == '' # this will end the loop if the user input is blank
-  end
-  # output data
+my_array=[]
+input = 0
+loop do
+  puts "Enter a Number, to exit press Enter..!! "
+  input = gets.chomp
+  my_array << input.to_i
+  break if input == ""
 end
+  puts "you have  #{my_array.count - 1} items in the Array"  
+  average = my_array.count - 1   
+  puts "The sum of all numbers in your array is: #{my_array.sum}"
+  puts "The array average is: #{my_array.sum / average.to_f}"
 
-main if __FILE__ == $PROGRAM_NAME
+
+
+
+
